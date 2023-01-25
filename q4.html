@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Example Page</title>
+    <style>
+     
+      #main {
+        background-color: white;
+        padding: 20px;
+        margin: 0 auto;
+        width: 80%;
+      }
+      
+      .alt-content {
+        background-color: lightgray;
+        padding: 20px;
+        margin: 0 auto;
+        width: 80%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Example Page</h1>
+    </header>
+    <main id="main">
+      <p>This is the initial content of the main section.</p>
+    </main>
+    <button id="replace-btn">Replace</button>
+    <script>
+      
+      var btn = document.getElementById("replace-btn");
+      var main = document.getElementById("main");
+      btn.addEventListener("click", function() {
+        main.innerHTML = "<p class='alt-content'>This is the alternate content of the main section.</p>";
+      });
+    </script>
+  </body>
+</html>
